@@ -81,7 +81,8 @@ public class OrderController {
 		log.info("Adding new order");
 
 		try {
-			Order order = orderService.add(mapper.map(orderDto, Order.class));
+			Order map = mapper.map(orderDto, Order.class);
+			Order order = orderService.add(orderDto.getStockMovementId(), map, getUserId(header));
 			OrderOutputDto dto = mapper.map(order, OrderOutputDto.class);
 			log.info("Order added " + dto.getId());
 

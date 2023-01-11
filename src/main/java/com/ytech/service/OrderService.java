@@ -11,7 +11,7 @@ public interface OrderService {
 
 	Optional<Order> findById(Long id);
 
-	Order add(Order order);
+	Order add(Long stockMovementId, Order order, Long userId);
 
 	Order update(Long id, Order order, Long userId);
 

@@ -14,4 +14,6 @@ public class OrderInputDto {
 	 */
 	private Integer quantity;
 
+	private Long stockMovementId;
+
 }
